@@ -1,27 +1,52 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import leases from "assets/leases.png";
 import happiness from "assets/happiness.png";
 import house from "assets/house.png";
 import roomate from "assets/roomate.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
 function Flexibility() {
+  useEffect(() => {
+    // below listed default settings
+    AOS.init({
+      // Global settings:
+      disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+      startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
+      initClassName: "aos-init", // class applied after initialization
+      animatedClassName: "aos-animate", // class applied on animation
+      useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+      disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+      debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+      throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+      // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+      offset: 120, // offset (in px) from the original trigger point
+      delay: 300, // values from 0 to 3000, with step 50ms
+      duration: 400, // values from 0 to 3000, with step 50ms
+      easing: "ease", // default easing for AOS animations
+      once: false, // whether animation should happen only once - while scrolling down
+      mirror: false, // whether elements should animate out while scrolling past them
+      anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
+    });
+  }, []);
   return (
     <Wrapper>
       <HeroWrapper>
         <LeftSection>
-          <ImageWrapper>
+          <ImageWrapper data-aos="fade-up-right">
             <Text>Flexible Leases</Text>
             <Image src={leases} />
           </ImageWrapper>
-          <ImageWrapper>
+          <ImageWrapper data-aos="fade-up-left">
             <Text>7-Day Happiness Guaranteed</Text>
             <Image src={happiness} />
           </ImageWrapper>
-          <ImageWrapper>
+          <ImageWrapper data-aos="fade-down-right">
             <Text>Monthly House Cleaning</Text>
             <Image src={house} />
           </ImageWrapper>
-          <ImageWrapper>
+          <ImageWrapper data-aos="fade-down-left">
             <Text>Choose Your Own Roommate</Text>
             <Image src={roomate} />
           </ImageWrapper>
@@ -102,6 +127,9 @@ const ImageWrapper = styled.div`
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  ::-webkit-scrollbar {
+    display: none;
+  }
   transition: all 0.5s ease-in-out;
   cursor: pointer;
   :hover {
@@ -118,6 +146,11 @@ const Text = styled.h4`
   color: #fff;
   top: 70px;
   position: relative;
+  overflow: hidden;
+  height: auto;
+  ::-webkit-scrollbar {
+    display: none;
+  }
 `;
 const Image = styled.img`
   :after {
