@@ -20,27 +20,27 @@ function Footer() {
           </LogoWrapper>
           <Contents>
             <Info>
-              <Svgs src={location} />
+              <Svgs src={location} alt="location" />
               <Desc>
                 345 Faulconer Drive, Suite 4 • Charlottesville, CA, 12345
               </Desc>
             </Info>
             <Info>
-              <Svgs src={call} />
+              <Svgs src={call} alt="call" />
               <Desc>(123) 456-7890</Desc>
             </Info>
             <Info>
-              <Svgs src={fax} />
+              <Svgs src={fax} alt="fax" />
               <Desc>(123) 456-7890</Desc>
             </Info>
             <SocialMedia>
               <SocialTitle>Social Media</SocialTitle>
-              <SocialIcons src={fb} />
-              <SocialIcons src={twitter} />
-              <SocialIcons src={linkedin} />
-              <SocialIcons src={youtube} />
-              <SocialIcons src={ig} />
-              <SocialIcons src={googlePlus} />
+              <SocialIcons src={fb} alt="fb" />
+              <SocialIcons src={twitter} alt="twitter" />
+              <SocialIcons src={linkedin} alt="linkedin" />
+              <SocialIcons src={youtube} alt="youtube" />
+              <SocialIcons src={ig} alt="ig" />
+              <SocialIcons src={googlePlus} alt="googlePlus" />
             </SocialMedia>
           </Contents>
         </FooterContents>
@@ -97,6 +97,12 @@ const SocialMedia = styled.div`
   margin-top: 40px;
   display: flex;
   align-items: center;
+  @media only screen and (max-width: 400px) {
+    /* flex-direction: column; */
+    align-items: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+  }
 `;
 const SocialTitle = styled.p`
   font-style: normal;
@@ -111,6 +117,9 @@ const Svgs = styled.img`
 
 const SocialIcons = styled.img`
   margin: 15px;
+  @media only screen and (max-width: 400px) {
+    margin: 5px;
+  }
 `;
 
 const FooterLinkWrapper = styled.div`

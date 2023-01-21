@@ -46,7 +46,7 @@ function Home() {
             The most affortable place to stay in the san franciso bay area
           </TextSection>
           <ImageSection data-aos="fade-left">
-            <MapImage src={map} />
+            <MapImage src={map} alt="map" />
             <SeletionWrapper>
               <SelectWrapper>
                 <Select>
@@ -86,11 +86,13 @@ function Home() {
       </HeroWrapper>
       <SecondHeroWrapper>
         <div style={{ padding: "0 20px" }}>
-          <Title>minimum living cost takes care of everything</Title>
+          <Title data-aos="fade-up">
+            minimum living cost takes care of everything
+          </Title>
         </div>
         <SectionWrapper>
           <LeftSection data-aos="fade-up-right">
-            <CostImage src={unsplashoGmf8o53LeE} />
+            <CostImage src={unsplashoGmf8o53LeE} alt="property" />
           </LeftSection>
           <RightSection>
             <CostContent>
@@ -276,6 +278,9 @@ const SeletionWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media only screen and (max-width: 400px) {
+    display: none;
+  }
 `;
 
 const Select = styled.select`
@@ -288,6 +293,11 @@ const Select = styled.select`
   font-weight: 500;
   font-size: 14px;
   line-height: 28px;
+  :active,
+  :focus {
+    border: none;
+    outline: none;
+  }
 `;
 const Options = styled.option`
   font-family: "Poppins";
@@ -320,7 +330,6 @@ const SecondHeroWrapper = styled.div`
   width: 100%;
   max-width: 1200px;
   margin: 50px auto;
-  overflow-x: hidden;
 `;
 const SectionWrapper = styled.div`
   display: grid;
@@ -342,7 +351,7 @@ const Title = styled.h4`
   font-style: normal;
   font-weight: 800;
   font-size: 36px;
-  line-height: 64px;
+  line-height: 1.5;
   color: #18191f;
   text-transform: capitalize;
   position: relative;
@@ -361,6 +370,9 @@ const CostImage = styled.img`
   box-shadow: 5px 24px 53px rgba(0, 0, 0, 0.25);
   border-radius: 50px 0px;
   width: 100%;
+  @media only screen and (max-width: 550px) {
+    max-width: 300px;
+  }
 `;
 const RightSection = styled.div`
   display: grid;

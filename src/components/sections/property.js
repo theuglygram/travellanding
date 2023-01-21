@@ -111,7 +111,7 @@ function Property() {
               data-aos="flip-left"
               data-aos-duration="1000"
             >
-              <CardImage src={items.img} />
+              <CardImage src={items.img} alt="property image" />
               <CardContent>
                 <Name>{items.name}</Name>
                 <RoomType>Private Room</RoomType>
@@ -280,6 +280,10 @@ const HeadWrap = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media only screen and (max-width: 400px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 const ContentWrapper = styled.div`
   display: grid;
@@ -315,10 +319,14 @@ const PropertyBtn = styled.button`
   text-align: center;
   color: #ffffff;
   cursor: pointer;
+  @media only screen and (max-width: 400px) {
+    margin-top: 50px;
+  }
 `;
 const CardWrapper = styled.div`
   background: #ffffff;
   border-radius: 26.6166px;
+  box-shadow: 0px 34.0693px 36.1986px rgba(0, 0, 0, 0.133714);
   height: auto;
   max-width: 358px;
   width: 100%;

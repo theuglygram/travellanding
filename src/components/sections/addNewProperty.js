@@ -19,43 +19,72 @@ function NewProperty() {
                 <Input placeholder="Enter Name" />
               </FormField>
               <FormField>
-                <Label>Name</Label>
-                <Input placeholder="Enter Name" />
+                <Label>Address</Label>
+                <Input placeholder="Enter Address" />
               </FormField>
               <FormField>
-                <Label>Name</Label>
-                <Input placeholder="Enter Name" />
-              </FormField>
-            </FormWrapper>
-            <FormWrapper>
-              <FormField>
-                <Label>Name</Label>
-                <Input placeholder="Enter Name" />
-              </FormField>
-              <FormField>
-                <Label>Name</Label>
-                <Input placeholder="Enter Name" />
-              </FormField>
-              <FormField>
-                <Label>Name</Label>
-                <Input placeholder="Enter Name" />
+                <Label>Unit</Label>
+                <Input placeholder="Enter Unit" />
               </FormField>
             </FormWrapper>
             <FormWrapper>
               <FormField>
-                <Label>Name</Label>
-                <Input placeholder="Enter Name" />
+                <Label>City</Label>
+
+                <SelectWrapper>
+                  <Select>
+                    <Options>Warri</Options>
+                    <Options>Ughelli</Options>
+                    <Options>Ekpan</Options>
+                    <Options>Sapele</Options>
+                  </Select>
+                </SelectWrapper>
               </FormField>
               <FormField>
-                <Label>Name</Label>
-                <Input placeholder="Enter Name" />
+                <Label>State</Label>
+                <SelectWrapper>
+                  <Select>
+                    <Options>Delta</Options>
+                    <Options> Lagos</Options>
+                    <Options>Abuja</Options>
+                    <Options>Benin</Options>
+                  </Select>
+                </SelectWrapper>
+              </FormField>
+              <FormField>
+                <Label>Room Type</Label>
+                <SelectWrapper>
+                  <Select>
+                    <Options> Self Contain</Options>
+                    <Options>Mini Flat</Options>
+                    <Options>Bedsitter</Options>
+                    <Options>2 Bedrooms</Options>
+                  </Select>
+                </SelectWrapper>
+              </FormField>
+            </FormWrapper>
+            <FormWrapper>
+              <FormField>
+                <Label>Price</Label>
+                <Input placeholder="Enter Price" />
+              </FormField>
+              <FormField>
+                <Label>Select Room type</Label>
+                <SelectWrapper>
+                  <Select>
+                    <Options>All Type</Options>
+                    <Options>All Type</Options>
+                    <Options>All Type</Options>
+                    <Options>All Type</Options>
+                  </Select>
+                </SelectWrapper>
               </FormField>
             </FormWrapper>
             <>
               <TextArea>
                 <Label>Description</Label>
 
-                <Textarea></Textarea>
+                <Textarea placeholder="Enter Description"></Textarea>
               </TextArea>
             </>
             <>
@@ -124,6 +153,7 @@ const Head = styled.h4`
   letter-spacing: 0.1px;
   color: #f4511e;
   padding-top: 40px;
+  overflow: hidden;
 `;
 const FormWrapper = styled.div`
   display: grid;
@@ -162,9 +192,6 @@ const Input = styled.input`
   :focus {
     outline: none;
     border: none;
-  }
-  @media only screen and (max-width: 768px) {
-    /* padding: unset; */
   }
 `;
 
@@ -237,6 +264,38 @@ const PropertyBtn = styled.button`
   font-size: 21.7911px;
   letter-spacing: 0.181593px;
   margin-top: 50px;
-
+  cursor: pointer;
   color: #ffffff;
+  @media only screen and (max-width: 320px) {
+    font-size: 14px;
+  }
+`;
+const SelectWrapper = styled.div`
+  background: #f9f9f9;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px 0px 0px 5px;
+`;
+
+const Select = styled.select`
+  width: 100%;
+  height: 58px;
+  border: none;
+  background: #f9f9f9;
+  font-family: "Poppins";
+  font-style: normal;
+  font-size: 14px;
+  line-height: 28px;
+  padding: 0 15px;
+  :active,
+  :focus {
+    border: none;
+    outline: none;
+  }
+`;
+const Options = styled.option`
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 28px;
 `;

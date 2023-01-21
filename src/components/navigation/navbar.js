@@ -31,7 +31,7 @@ function Navbar() {
     <NavWrapper>
       <Navcontent data-aos="fade-down">
         <LogoHolder>
-          <Logo src={logo} />
+          <Logo src={logo} alt="logo" />
         </LogoHolder>
         <LinksHolder>
           <Links>Home</Links>
@@ -39,6 +39,11 @@ function Navbar() {
           <Links>Tenants</Links>
           <Links>Contact Us</Links>
         </LinksHolder>
+
+        <HamburgerMenu>
+          <Menu></Menu>
+          <Menu></Menu>
+        </HamburgerMenu>
       </Navcontent>
     </NavWrapper>
   );
@@ -46,19 +51,37 @@ function Navbar() {
 
 export default Navbar;
 
-const NavWrapper = styled.div``;
+const NavWrapper = styled.div`
+  padding: 15px 20px;
+`;
 const Navcontent = styled.div`
   max-width: 1200px;
   width: 100%;
   margin: 20px auto;
-  padding: 15px 20px;
+
   display: flex;
   border-bottom: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+const HamburgerMenu = styled.div`
+  display: none;
+  @media only screen and (max-width: 768px) {
+    display: block;
+  }
+`;
+const Menu = styled.div`
+  height: 1px;
+  width: 25px;
+  margin: 4px;
+  background: #fff;
 `;
 const LogoHolder = styled.div``;
 const Logo = styled.img``;
 const LinksHolder = styled.ul`
-  /* max-width: 500px; */
+  max-width: 500px;
   width: 100%;
   display: flex;
   align-items: center;

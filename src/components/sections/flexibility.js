@@ -36,19 +36,19 @@ function Flexibility() {
         <LeftSection>
           <ImageWrapper data-aos="fade-up-right">
             <Text>Flexible Leases</Text>
-            <Image src={leases} />
+            <Image src={leases} alt="lease" />
           </ImageWrapper>
           <ImageWrapper data-aos="fade-up-left">
             <Text>7-Day Happiness Guaranteed</Text>
-            <Image src={happiness} />
+            <Image src={happiness} alt="happiness" />
           </ImageWrapper>
           <ImageWrapper data-aos="fade-down-right">
             <Text>Monthly House Cleaning</Text>
-            <Image src={house} />
+            <Image src={house} alt="house" />
           </ImageWrapper>
           <ImageWrapper data-aos="fade-down-left">
             <Text>Choose Your Own Roommate</Text>
-            <Image src={roomate} />
+            <Image src={roomate} alt="roomate" />
           </ImageWrapper>
         </LeftSection>
         <RightSection>
@@ -87,8 +87,8 @@ const LeftSection = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
-  @media only screen and (max-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
+  @media only screen and (max-width: 400px) {
+    grid-template-columns: 1fr;
   }
 `;
 const RightSection = styled.div``;
