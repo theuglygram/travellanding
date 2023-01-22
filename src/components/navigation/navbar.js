@@ -1,9 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import logo from "assets/logo.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 function Navbar() {
+  const [openNav, setOpenNav] = useState(false);
+  const toggleHamburger = () => {
+    setOpenNav(!openNav);
+  };
   useEffect(() => {
     // below listed default settings
     AOS.init({
@@ -33,16 +37,16 @@ function Navbar() {
         <LogoHolder>
           <Logo src={logo} alt="logo" />
         </LogoHolder>
-        <LinksHolder>
+        <LinksHolder toggle={openNav}>
           <Links>Home</Links>
           <Links>Landlords</Links>
           <Links>Tenants</Links>
           <Links>Contact Us</Links>
         </LinksHolder>
 
-        <HamburgerMenu>
-          <Menu></Menu>
-          <Menu></Menu>
+        <HamburgerMenu onClick={toggleHamburger}>
+          <Menu1 toggle={openNav}></Menu1>
+          <Menu2 toggle={openNav}></Menu2>
         </HamburgerMenu>
       </Navcontent>
     </NavWrapper>
@@ -52,43 +56,81 @@ function Navbar() {
 export default Navbar;
 
 const NavWrapper = styled.div`
-  padding: 15px 20px;
+  padding: 0 20px;
+  position: relative;
+  z-index: 9999;
+  @media only screen and (max-width: 768px) {
+    padding: unset;
+  }
 `;
 const Navcontent = styled.div`
   max-width: 1200px;
   width: 100%;
   margin: 20px auto;
-
   display: flex;
   border-bottom: 1px solid #fff;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media only screen and (max-width: 768px) {
+    padding: 20px 0;
+    margin: unset;
+  }
 `;
 
 const HamburgerMenu = styled.div`
   display: none;
   @media only screen and (max-width: 768px) {
     display: block;
+    z-index: 999;
   }
 `;
-const Menu = styled.div`
+const Menu1 = styled.div`
   height: 1px;
   width: 25px;
   margin: 4px;
   background: #fff;
+  transform: ${(props) =>
+    props.toggle ? "rotate(-45deg) translate(-1px,4px)" : "rotate(0)"};
 `;
-const LogoHolder = styled.div``;
-const Logo = styled.img``;
+const Menu2 = styled.div`
+  height: 1px;
+  width: 25px;
+  margin: 4px;
+  background: #fff;
+  transform: ${(props) =>
+    props.toggle ? "rotate(45deg) translate(1px,-2px)" : "rotate(0)"};
+`;
+const LogoHolder = styled.div`
+  z-index: 9999;
+`;
+const Logo = styled.img`
+  padding: 0 20px;
+`;
 const LinksHolder = styled.ul`
   max-width: 500px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-left: 200px;
+  transition: all 2s ease-out;
   @media only screen and (max-width: 768px) {
-    display: none;
+    flex-direction: column;
+    position: absolute;
+    z-index: 10;
+    height: 100vh;
+    background: #000;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    max-width: unset;
+    justify-content: space-evenly;
+    text-align: center;
+    transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    transform: ${(props) =>
+      props.toggle ? "translateX(0px)" : "translateX(-1500px)"};
   }
 `;
 const Links = styled.li`

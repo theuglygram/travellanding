@@ -94,6 +94,7 @@ const Wrapper = styled.div`
   width: 100%;
   height: auto;
   background: rgba(244, 81, 30, 0.07);
+  overflow-x: hidden !important;
 `;
 const ContentWrapper = styled.div`
   display: flex;

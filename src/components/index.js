@@ -222,6 +222,7 @@ const HeroWrapper = styled.div`
   height: 100vh;
   width: 100%;
   overflow: hidden;
+  position: relative;
 
   @media only screen and (max-width: 768px) {
     height: auto;
@@ -232,7 +233,7 @@ const HeroWrapper = styled.div`
 const HeroBody = styled.div`
   width: 100%;
   max-width: 1200px;
-  margin: 150px auto;
+  margin: 100px auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 100px;
