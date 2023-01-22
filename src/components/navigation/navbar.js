@@ -80,6 +80,7 @@ const Navcontent = styled.div`
 
 const HamburgerMenu = styled.div`
   display: none;
+  padding: 0 20px;
   @media only screen and (max-width: 768px) {
     display: block;
     z-index: 999;
@@ -119,7 +120,8 @@ const LinksHolder = styled.ul`
     position: absolute;
     z-index: 10;
     height: 100vh;
-    background: #000;
+    background: ${(props) => (props.toggle ? "#000" : "transparent")};
+
     width: 100vw;
     left: 0;
     top: 0;
