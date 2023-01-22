@@ -8,6 +8,9 @@ import unsplashT6d96Qrb5MY from "assets/unsplashT6d96Qrb5MY.png";
 import unsplashKQgrVfR3r74 from "assets/unsplashKQgrVfR3r74.png";
 import unsplashUV81E0oXXWQ from "assets/unsplashUV81E0oXXWQ.png";
 import unsplashuDtC1NLEzU from "assets/unsplashuDtC1NLEzU.png";
+import abc from "assets/abc.jfif";
+import def from "assets/def.jfif";
+import ghi from "assets/ghi.jfif";
 function Property() {
   useEffect(() => {
     // below listed default settings
@@ -58,6 +61,7 @@ function Property() {
       shower: "2",
       bed: "2",
     },
+
     {
       img: unsplashKQgrVfR3r74,
       name: "2578 Folsom Street, San Francisco, CA, 94110",
@@ -82,11 +86,59 @@ function Property() {
       shower: "2",
       bed: "2",
     },
+    {
+      img: unsplashIt1hg4Hs,
+      name: "2578 Folsom Street, San Francisco, CA, 94110",
+      price: "$1200/Month",
+      rooms: "4",
+      shower: "2",
+      bed: "2",
+    },
+    {
+      img: unsplash2d4lAQAlbDA,
+      name: "2578 Folsom Street, San Francisco, CA, 94110",
+      price: "$1200/Month",
+      rooms: "4",
+      shower: "2",
+      bed: "2",
+    },
+    {
+      img: unsplashT6d96Qrb5MY,
+      name: "2578 Folsom Street, San Francisco, CA, 94110",
+      price: "$1200/Month",
+      rooms: "4",
+      shower: "2",
+      bed: "2",
+    },
+    {
+      img: unsplashIt1hg4Hs,
+      name: "2578 Folsom Street, San Francisco, CA, 94110",
+      price: "$1200/Month",
+      rooms: "4",
+      shower: "2",
+      bed: "2",
+    },
+    {
+      img: unsplash2d4lAQAlbDA,
+      name: "2578 Folsom Street, San Francisco, CA, 94110",
+      price: "$1200/Month",
+      rooms: "4",
+      shower: "2",
+      bed: "2",
+    },
+    {
+      img: unsplashT6d96Qrb5MY,
+      name: "2578 Folsom Street, San Francisco, CA, 94110",
+      price: "$1200/Month",
+      rooms: "4",
+      shower: "2",
+      bed: "2",
+    },
   ]);
 
   // PAGINATION STATES
   const [currentpage, setcurrentPage] = useState(1);
-  const [postPerPage, setpostPerPage] = useState(3);
+  const [postPerPage, setpostPerPage] = useState(6);
   const lastPostIndex = currentpage * postPerPage;
   const firstPostIndex = lastPostIndex - postPerPage;
   const currentPost = listofProperties.slice(firstPostIndex, lastPostIndex);

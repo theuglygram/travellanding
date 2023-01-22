@@ -3,7 +3,8 @@ import styled from "styled-components";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import vidimage from "assets/vidimage.png";
+import rental from "assets/rental.mp4";
+import user from "assets/user.png";
 
 function Testimonial() {
   var settings = {
@@ -31,7 +32,7 @@ function Testimonial() {
                     mattis eu velit. Donec sed risus a lacus fringilla finibus.
                   </Desc>
                   <Details>
-                    <Image />
+                    <Image src={user} />
                     <Info>
                       <Name>Harry Wilson</Name>
                       <Role>Property Owner</Role>
@@ -50,7 +51,7 @@ function Testimonial() {
                     mattis eu velit. Donec sed risus a lacus fringilla finibus.
                   </Desc>
                   <Details>
-                    <Image />
+                    <Image src={user} />
                     <Info>
                       <Name>Harry Wilson</Name>
                       <Role>Property Owner</Role>
@@ -69,7 +70,7 @@ function Testimonial() {
                     mattis eu velit. Donec sed risus a lacus fringilla finibus.
                   </Desc>
                   <Details>
-                    <Image />
+                    <Image src={user} />
                     <Info>
                       <Name>Harry Wilson</Name>
                       <Role>Property Owner</Role>
@@ -81,7 +82,13 @@ function Testimonial() {
           </div>
         </LeftSection>
         <RightSection>
-          <VidMage src={vidimage} />
+          <video
+            src={rental}
+            width="100%;"
+            height="300"
+            controls="controls"
+            autoplay="true"
+          />
         </RightSection>
       </ContentWrapper>
     </Wrapper>
@@ -121,14 +128,19 @@ const Content = styled.div`
   max-width: 400px;
 `;
 const Desc = styled.div``;
-const Details = styled.div``;
-const Image = styled.div``;
-const Info = styled.div``;
+const Details = styled.div`
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+`;
+const Image = styled.img``;
+const Info = styled.div`
+  margin-left: 20px;
+`;
 const Name = styled.h4`
   font-weight: 700;
   font-size: 18px;
   color: #f4511e;
-  margin-top: 10px;
 `;
 const Role = styled.p`
   font-weight: 400;
@@ -136,8 +148,4 @@ const Role = styled.p`
   font-feature-settings: "salt" on, "liga" off;
   color: #18191f;
   margin: unset;
-`;
-
-const VidMage = styled.img`
-  width: 100%;
 `;

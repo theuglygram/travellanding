@@ -1,13 +1,16 @@
 {
   "files": {
     "main.css": "/static/css/main.c5390fbb.css",
-    "main.js": "/static/js/main.a8b0c986.js",
+    "main.js": "/static/js/main.7b611504.js",
     "static/js/787.054cce5e.chunk.js": "/static/js/787.054cce5e.chunk.js",
+    "static/media/rental.mp4": "/static/media/rental.99ea7418a9c21dc9f272.mp4",
     "static/media/herobackground.png": "/static/media/herobackground.674a84aba0b35251dd76.png",
-    "static/media/vidimage.png": "/static/media/vidimage.02db295cd76f16424c84.png",
     "static/media/happiness.png": "/static/media/happiness.8bf2a216bb701a38a36b.png",
     "static/media/map.png": "/static/media/map.dda8df32343aa4238a7c.png",
+    "static/media/abc.jfif": "/static/media/abc.e61e29ac93a38c1b72fb.jfif",
     "static/media/unsplashoGmf8o53LeE.png": "/static/media/unsplashoGmf8o53LeE.e5db033f8fc84f5d882f.png",
+    "static/media/def.jfif": "/static/media/def.304f6965416739a7b25e.jfif",
+    "static/media/ghi.jfif": "/static/media/ghi.569ae7af672ec10f0381.jfif",
     "static/media/roomate.png": "/static/media/roomate.a43fbf91e4a893502d43.png",
     "static/media/unsplashUV81E0oXXWQ.png": "/static/media/unsplashUV81E0oXXWQ.190bbaa11fd613e1da7c.png",
     "static/media/unsplashKQgrVfR3r74.png": "/static/media/unsplashKQgrVfR3r74.486f4d9fb7899275ec80.png",
@@ -32,11 +35,11 @@
     "static/media/call.svg": "/static/media/call.ef8c20ddffd576a8e74ef02dd2948565.svg",
     "static/media/location.svg": "/static/media/location.58f5d8fe6f5eafda0e9702256c5a9f8d.svg",
     "main.c5390fbb.css.map": "/static/css/main.c5390fbb.css.map",
-    "main.a8b0c986.js.map": "/static/js/main.a8b0c986.js.map",
+    "main.7b611504.js.map": "/static/js/main.7b611504.js.map",
     "787.054cce5e.chunk.js.map": "/static/js/787.054cce5e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c5390fbb.css",
-    "static/js/main.a8b0c986.js"
+    "static/js/main.7b611504.js"
   ]
 }
